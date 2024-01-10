@@ -1,0 +1,15 @@
+---
+apiVersion: apps.3scale.net/v1alpha1
+kind: APIcast
+metadata:
+  annotations:
+    apicast.apps.3scale.net/operator-version: 0.8.0
+  name: apicast-staging
+spec:
+  adminPortalCredentialsRef:
+    name: token-apicast-staging
+  configurationLoadMode: lazy
+  deploymentEnvironment: staging
+  replicas: 1
+  timezone: America/Santiago
+

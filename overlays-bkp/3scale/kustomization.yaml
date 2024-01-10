@@ -2,8 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 bases:
   - ../../base-operator
-configurations:
-  - config.yaml
+
 # generatorOptions:
 #  disableNameSuffixHash: true
 # secretGenerator:
@@ -33,22 +32,8 @@ resources:
 - resources/secret-s3-auth.yaml
 - resources/clusterrole.yaml
 
-# Dev Tenant 
-- resources/tenant-dev/dev-tenant-namespace.yaml
-- resources/tenant-dev/dev-admin-secret.yaml
-- resources/tenant-dev/dev-tenant.yaml
-
-# QA Tenant 
-- resources/tenant-qa/qa-tenant-namespace.yaml
-- resources/tenant-qa/qa-admin-secret.yaml
-- resources/tenant-qa/qa-tenant.yaml
-
-vars:
-  - name: DOMAIN
-    objref:
-      apiVersion: apps.3scale.net/v1alpha1
-      kind: APIManager
-      name: apimanager
-    fieldref:
-      fieldpath: spec.wildcardDomain
+# dev tenant
+- resources/dev-tenant-namespace.yaml
+- resources/dev-admin-secret.yaml
+- resources/dev-tenant.yaml
 

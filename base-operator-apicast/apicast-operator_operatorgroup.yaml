@@ -5,6 +5,6 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
 # Sync Wave 1 since we need to have the namespace first
-  name: 3scale
+  name: 3scale-apicast
 spec:
   targetNamespaces: []

@@ -4,16 +4,14 @@ kind: Subscription
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
-# sync wave 2 since we need the Namespace and OperatorGroup and so on...
-  name: 3scale-operator
-  namespace: openshift-operators
-
+  labels:
+    operators.coreos.com/apicast-operator.3scale-borrar: ''
+  name: apicast-operator
 spec:
   channel: threescale-2.14
   installPlanApproval: Automatic
-  name: 3scale-operator
+  name: apicast-operator
   source: redhat-operators
   sourceNamespace: openshift-marketplace
-  startingCSV: 3scale-operator.v0.11.10
-
+  startingCSV: apicast-operator.v0.8.0
 
