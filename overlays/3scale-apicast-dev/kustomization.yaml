@@ -6,8 +6,8 @@ bases:
 # configurations:
 #   - config.yaml
 
-generatorOptions:
-  disableNameSuffixHash: true
+# generatorOptions:
+#   disableNameSuffixHash: true
 
 # secretGenerator:
 # - name: token-apicast-staging
@@ -20,7 +20,7 @@ generatorOptions:
 patches:
 - patch: |-
     - op: add
-      path: /spec/targetNamespaces
+      path: /spec/targetNamespaces/-
       value: 3scale-apicast-dev
   target:
     group: operators.coreos.com
