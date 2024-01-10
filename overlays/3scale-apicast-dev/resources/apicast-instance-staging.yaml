@@ -4,7 +4,7 @@ kind: APIcast
 metadata:
   annotations:
     apicast.apps.3scale.net/operator-version: 0.8.0
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "2"
   name: apicast-staging
 spec:
   adminPortalCredentialsRef:
