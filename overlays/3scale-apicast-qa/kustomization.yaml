@@ -21,7 +21,7 @@ patches:
 - patch: |-
     - op: add
       path: /spec/targetNamespaces/-
-      value: 3scale-apicast-qa
+      value: 3scale-apicast-qa-02
   target:
     group: operators.coreos.com
     kind: OperatorGroup
