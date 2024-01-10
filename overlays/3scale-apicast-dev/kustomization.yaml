@@ -3,8 +3,8 @@ kind: Kustomization
 bases:
   - ../../base-operator-apicast
 
-configurations:
-  - config.yaml
+# configurations:
+#   - config.yaml
 
 generatorOptions:
   disableNameSuffixHash: true
