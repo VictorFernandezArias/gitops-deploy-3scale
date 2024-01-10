@@ -9,18 +9,18 @@ bases:
 generatorOptions:
   disableNameSuffixHash: true
 
-secretGenerator:
-- name: token-apicast-staging
-  envs:
-  - env/token-secret.env
-- name: token-apicast-production
-  envs:
-  - env/token-secret.env
+# secretGenerator:
+# - name: token-apicast-staging
+#   envs:
+#   - env/token-secret.env
+# - name: token-apicast-production
+#   envs:
+#   - env/token-secret.env
 
 patches:
 - patch: |-
     - op: add
-      path: /spec/targetNamespaces/-
+      path: /spec/targetNamespaces
       value: 3scale-apicast-dev
   target:
     group: operators.coreos.com
