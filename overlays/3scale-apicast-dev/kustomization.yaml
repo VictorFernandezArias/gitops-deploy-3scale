@@ -38,13 +38,3 @@ resources:
 
 
 
-
-vars:
-  - name: DOMAIN
-    objref:
-      apiVersion: apps.3scale.net/v1alpha1
-      kind: APIManager
-      name: apimanager
-    fieldref:
-      fieldpath: spec.wildcardDomain
-
