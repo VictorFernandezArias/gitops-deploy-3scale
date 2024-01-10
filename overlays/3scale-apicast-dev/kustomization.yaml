@@ -32,7 +32,7 @@ patches:
 #   - path: image-tag-replacement.yaml
 
 resources: 
-- resources/namespace.yaml
+# - resources/namespace.yaml
 - resources/apicast-instance-staging.yaml
 - resources/apicast-instance-production.yaml
 
