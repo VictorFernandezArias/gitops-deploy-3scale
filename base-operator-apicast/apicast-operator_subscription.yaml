@@ -4,8 +4,8 @@ kind: Subscription
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "2"
-  # labels:
-  #   operators.coreos.com/apicast-operator.3scale-apicast-dev: ''
+  labels:
+    operators.coreos.com/apicast-operator.3scale-apicast-dev: ''
   name: apicast-operator
 spec:
   channel: threescale-2.14
