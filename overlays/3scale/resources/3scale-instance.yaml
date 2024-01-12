@@ -40,7 +40,7 @@ spec:
     responseCodes: true
     stagingSpec: 
       replicas: 1
-  wildcardDomain: apps.cluster-dhcnv.dhcnv.sandbox721.opentlc.com
+  wildcardDomain: apps.cluster-t985z.t985z.sandbox2098.opentlc.com
 
 
 

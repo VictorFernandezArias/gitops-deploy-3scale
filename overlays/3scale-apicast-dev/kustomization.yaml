@@ -3,19 +3,17 @@ kind: Kustomization
 bases:
   - ../../base-operator-apicast
 
-# configurations:
-#   - config.yaml
 
-# generatorOptions:
-#   disableNameSuffixHash: true
+generatorOptions:
+  disableNameSuffixHash: true
 
-# secretGenerator:
-# - name: token-apicast-staging
-#   envs:
-#   - env/token-secret.env
-# - name: token-apicast-production
-#   envs:
-#   - env/token-secret.env
+secretGenerator:
+- name: token-apicast-staging
+  envs:
+  - env/token-secret.env
+- name: token-apicast-production
+  envs:
+  - env/token-secret.env
 
 patches:
 - patch: |-
@@ -28,13 +26,10 @@ patches:
     name: 3scale-apicast
     version: v1
 
-# replacements:
-#   - path: image-tag-replacement.yaml
 
 resources: 
-# - resources/namespace.yaml
-# - resources/apicast-instance-staging.yaml
-# - resources/apicast-instance-production.yaml
+- resources/apicast-instance-staging.yaml
+- resources/apicast-instance-production.yaml
 
 
 

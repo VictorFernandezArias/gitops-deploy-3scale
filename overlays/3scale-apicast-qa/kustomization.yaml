@@ -3,8 +3,6 @@ kind: Kustomization
 bases:
   - ../../base-operator-apicast
 
-# configurations:
-#   - config.yaml
 
 generatorOptions:
   disableNameSuffixHash: true
@@ -21,30 +19,16 @@ patches:
 - patch: |-
     - op: add
       path: /spec/targetNamespaces/-
-      value: 3scale-apicast-qa-02
+      value: 3scale-apicast-qa
   target:
     group: operators.coreos.com
     kind: OperatorGroup
     name: 3scale-apicast
     version: v1
 
-# replacements:
-#   - path: image-tag-replacement.yaml
 
 resources: 
-# - resources/namespace.yaml
 - resources/apicast-instance-staging.yaml
 - resources/apicast-instance-production.yaml
 
-
-
-
-# vars:
-#   - name: DOMAIN
-#     objref:
-#       apiVersion: apps.3scale.net/v1alpha1
-#       kind: APIManager
-#       name: apimanager
-#     fieldref:
-#       fieldpath: spec.wildcardDomain
 
